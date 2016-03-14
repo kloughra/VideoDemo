@@ -15,6 +15,8 @@
 		457D7CF31C97415B00AEBE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D7CF11C97415B00AEBE11 /* LaunchScreen.storyboard */; };
 		457D7CFE1C97415B00AEBE11 /* MediaPlayerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D7CFD1C97415B00AEBE11 /* MediaPlayerDemoTests.swift */; };
 		457D7D091C97415B00AEBE11 /* MediaPlayerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D7D081C97415B00AEBE11 /* MediaPlayerDemoUITests.swift */; };
+		457D7D171C97425900AEBE11 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D7D161C97425900AEBE11 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		457D7D191C9744CB00AEBE11 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D7D181C9744CB00AEBE11 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		457D7D041C97415B00AEBE11 /* MediaPlayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPlayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		457D7D081C97415B00AEBE11 /* MediaPlayerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDemoUITests.swift; sourceTree = "<group>"; };
 		457D7D0A1C97415B00AEBE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457D7D161C97425900AEBE11 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		457D7D181C9744CB00AEBE11 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457D7D191C9744CB00AEBE11 /* AVKit.framework in Frameworks */,
+				457D7D171C97425900AEBE11 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,8 @@
 		457D7CD91C97415A00AEBE11 = {
 			isa = PBXGroup;
 			children = (
+				457D7D181C9744CB00AEBE11 /* AVKit.framework */,
+				457D7D161C97425900AEBE11 /* MediaPlayer.framework */,
 				457D7CE41C97415B00AEBE11 /* MediaPlayerDemo */,
 				457D7CFC1C97415B00AEBE11 /* MediaPlayerDemoTests */,
 				457D7D071C97415B00AEBE11 /* MediaPlayerDemoUITests */,
