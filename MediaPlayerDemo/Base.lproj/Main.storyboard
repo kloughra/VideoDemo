@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVG-OS-Vkh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVG-OS-Vkh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
+        <!--Movie View Controller-->
+        <scene sceneID="w0s-ot-RZe">
+            <objects>
+                <viewController id="sxd-oh-rbE" customClass="MovieViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1aD-Pt-Xm7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Unn-94-zT6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Sw-bY-I7o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4l9-wK-C2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="-520"/>
+        </scene>
         <!--Stream View Controller-->
         <scene sceneID="zlJ-vM-NLP">
             <objects>
@@ -26,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2z2-ye-foe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947" y="-126"/>
+            <point key="canvasLocation" x="1049" y="154"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="xru-Mu-0if">
@@ -68,6 +86,9 @@
                                 <rect key="frame" x="243" y="360" width="114" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Local Video"/>
+                                <connections>
+                                    <segue destination="sxd-oh-rbE" kind="show" id="spo-sK-0T1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-N8-pqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="-120"/>
+            <point key="canvasLocation" x="267" y="-156"/>
         </scene>
     </scenes>
 </document>

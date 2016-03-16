@@ -10,6 +10,7 @@
 import UIKit
 import MediaPlayer
 import AVKit
+import CoreGraphics
 
 class StreamViewController: UIViewController {
     
@@ -25,6 +26,7 @@ class StreamViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+
         self.playerViewController.player = player
         self.presentViewController(self.playerViewController, animated: true) {
             self.playerViewController.player!.play()
