@@ -36,6 +36,11 @@ class MainViewController: UIViewController {
             let destination = segue.destinationViewController as! LiveVideoViewController
             destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
         }
+        if segue.identifier == "localVideo" {
+            //let destination = segue.destinationViewController as! MovieViewController
+           // destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
+        }
+        
     }
 
 

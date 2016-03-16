@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		451299471C98FCA100111BC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451299461C98FCA100111BC5 /* MainViewController.swift */; };
 		457D7CE61C97415B00AEBE11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D7CE51C97415B00AEBE11 /* AppDelegate.swift */; };
-		457D7CE81C97415B00AEBE11 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D7CE71C97415B00AEBE11 /* StreamViewController.swift */; };
+		457D7CE81C97415B00AEBE11 /* LocalMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D7CE71C97415B00AEBE11 /* LocalMediaViewController.swift */; };
 		457D7CEB1C97415B00AEBE11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D7CE91C97415B00AEBE11 /* Main.storyboard */; };
 		457D7CEE1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457D7CEC1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld */; };
 		457D7CF01C97415B00AEBE11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457D7CEF1C97415B00AEBE11 /* Assets.xcassets */; };
@@ -19,6 +19,7 @@
 		457D7D171C97425900AEBE11 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D7D161C97425900AEBE11 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		457D7D191C9744CB00AEBE11 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D7D181C9744CB00AEBE11 /* AVKit.framework */; };
 		45EACED51C9934D900467D9E /* LiveVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EACED41C9934D900467D9E /* LiveVideoViewController.swift */; };
+		45EACED91C99413D00467D9E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EACED81C99413D00467D9E /* MobileCoreServices.framework */; };
 		CC44E3ED1C990AEC0060F0F5 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */; };
 		CC44E3F11C99103D0060F0F5 /* trailer_1080p.mov in Resources */ = {isa = PBXBuildFile; fileRef = CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */; };
 /* End PBXBuildFile section */
@@ -44,7 +45,7 @@
 		451299461C98FCA100111BC5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		457D7CE21C97415B00AEBE11 /* MediaPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457D7CE51C97415B00AEBE11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		457D7CE71C97415B00AEBE11 /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		457D7CE71C97415B00AEBE11 /* LocalMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMediaViewController.swift; sourceTree = "<group>"; };
 		457D7CEA1C97415B00AEBE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		457D7CED1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediaPlayerDemo.xcdatamodel; sourceTree = "<group>"; };
 		457D7CEF1C97415B00AEBE11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		457D7D161C97425900AEBE11 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		457D7D181C9744CB00AEBE11 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		45EACED41C9934D900467D9E /* LiveVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveVideoViewController.swift; sourceTree = "<group>"; };
+		45EACED81C99413D00467D9E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_1080p.mov; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45EACED91C99413D00467D9E /* MobileCoreServices.framework in Frameworks */,
 				457D7D191C9744CB00AEBE11 /* AVKit.framework in Frameworks */,
 				457D7D171C97425900AEBE11 /* MediaPlayer.framework in Frameworks */,
 			);
@@ -93,6 +96,7 @@
 		457D7CD91C97415A00AEBE11 = {
 			isa = PBXGroup;
 			children = (
+				45EACED81C99413D00467D9E /* MobileCoreServices.framework */,
 				457D7D181C9744CB00AEBE11 /* AVKit.framework */,
 				457D7D161C97425900AEBE11 /* MediaPlayer.framework */,
 				457D7CE41C97415B00AEBE11 /* MediaPlayerDemo */,
@@ -119,7 +123,7 @@
 				451299461C98FCA100111BC5 /* MainViewController.swift */,
 				CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */,
 				457D7CE51C97415B00AEBE11 /* AppDelegate.swift */,
-				457D7CE71C97415B00AEBE11 /* StreamViewController.swift */,
+				457D7CE71C97415B00AEBE11 /* LocalMediaViewController.swift */,
 				457D7CE91C97415B00AEBE11 /* Main.storyboard */,
 				CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */,
 				457D7CEF1C97415B00AEBE11 /* Assets.xcassets */,
@@ -283,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457D7CE81C97415B00AEBE11 /* StreamViewController.swift in Sources */,
+				457D7CE81C97415B00AEBE11 /* LocalMediaViewController.swift in Sources */,
 				CC44E3ED1C990AEC0060F0F5 /* MovieViewController.swift in Sources */,
 				45EACED51C9934D900467D9E /* LiveVideoViewController.swift in Sources */,
 				457D7CEE1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld in Sources */,

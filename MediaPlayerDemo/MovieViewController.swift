@@ -12,7 +12,7 @@ import MobileCoreServices
 import AVKit
 import AVFoundation
 
-class MovieViewController: UIViewController {
+class MovieViewController: AVPlayerViewController {
     
     private var firstAppear = true
     
