@@ -119,17 +119,9 @@
 		457D7CE41C97415B00AEBE11 /* MediaPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				45EACED41C9934D900467D9E /* LiveVideoViewController.swift */,
-				451299461C98FCA100111BC5 /* MainViewController.swift */,
-				CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */,
-				457D7CE51C97415B00AEBE11 /* AppDelegate.swift */,
-				457D7CE71C97415B00AEBE11 /* LocalMediaViewController.swift */,
-				457D7CE91C97415B00AEBE11 /* Main.storyboard */,
-				CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */,
-				457D7CEF1C97415B00AEBE11 /* Assets.xcassets */,
-				457D7CF11C97415B00AEBE11 /* LaunchScreen.storyboard */,
-				457D7CF41C97415B00AEBE11 /* Info.plist */,
-				457D7CEC1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld */,
+				45EACEDC1C99D51300467D9E /* Controller */,
+				45EACEDB1C99D4FC00467D9E /* View */,
+				45EACEDD1C99D52D00467D9E /* Other */,
 			);
 			path = MediaPlayerDemo;
 			sourceTree = "<group>";
@@ -150,6 +142,38 @@
 				457D7D0A1C97415B00AEBE11 /* Info.plist */,
 			);
 			path = MediaPlayerDemoUITests;
+			sourceTree = "<group>";
+		};
+		45EACEDB1C99D4FC00467D9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				457D7CF11C97415B00AEBE11 /* LaunchScreen.storyboard */,
+				457D7CE91C97415B00AEBE11 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		45EACEDC1C99D51300467D9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				451299461C98FCA100111BC5 /* MainViewController.swift */,
+				45EACED41C9934D900467D9E /* LiveVideoViewController.swift */,
+				457D7CE71C97415B00AEBE11 /* LocalMediaViewController.swift */,
+				CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		45EACEDD1C99D52D00467D9E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				457D7CE51C97415B00AEBE11 /* AppDelegate.swift */,
+				CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */,
+				457D7CEF1C97415B00AEBE11 /* Assets.xcassets */,
+				457D7CF41C97415B00AEBE11 /* Info.plist */,
+				457D7CEC1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

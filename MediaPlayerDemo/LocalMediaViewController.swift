@@ -41,20 +41,21 @@ UINavigationControllerDelegate {
     }
     
     func startMediaBrowserFromViewController(viewController: UIViewController, usingDelegate delegate: protocol<UINavigationControllerDelegate, UIImagePickerControllerDelegate>) -> Bool {
-        // 1
+        
+        //Make sure Photo Album source is available
         if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) == false {
             return false
         }
         
-        // 2
-        let mediaUI = UIImagePickerController()
-        mediaUI.sourceType = .SavedPhotosAlbum
-        mediaUI.mediaTypes = [kUTTypeMovie as NSString as String]
-        mediaUI.allowsEditing = true
-        mediaUI.delegate = delegate
+        //Create an image picker controller, set the source type to the Saved Photo Album
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .SavedPhotosAlbum
+        imagePicker.mediaTypes = [kUTTypeMovie as String]
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = delegate
         
-        // 3
-        presentViewController(mediaUI, animated: true, completion: nil)
+        //Launch the Controller
+        presentViewController(imagePicker, animated: true, completion: nil)
         return true
     }
     
@@ -64,12 +65,13 @@ UINavigationControllerDelegate {
 
 extension LocalMediaViewController{
 
+    //Add this optional function! in order to change the action after the video is chosen
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        // 1
-        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         
-        // 2
-        dismissViewControllerAnimated(true) {
+        //let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        /*dismissViewControllerAnimated(true) {
             // 3
             if mediaType == kUTTypeMovie {
                 let player = AVPlayer(URL:info[UIImagePickerControllerMediaURL] as! NSURL)
@@ -81,7 +83,7 @@ extension LocalMediaViewController{
                 //let moviePlayer = MPMoviePlayerViewController(contentURL: info[UIImagePickerControllerMediaURL] as! NSURL)
                 //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
             }
-        }
+        }*/
     }
 }
 
