@@ -18,9 +18,10 @@ class MovieViewController: AVPlayerViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         if firstAppear {
             do {
-                try playVideo()
+                //try playVideo()
                 firstAppear = false
             } catch AppError.InvalidResource(let name, let type) {
                 debugPrint("Could not find resource \(name).\(type)")
@@ -32,15 +33,12 @@ class MovieViewController: AVPlayerViewController {
     }
     
     private func playVideo() throws {
-        guard let path = NSBundle.mainBundle().pathForResource("trailer_1080p", ofType:"mov") else {
-            throw AppError.InvalidResource("video", "m4v")
-        }
-        let player = AVPlayer(URL: NSURL(fileURLWithPath: path))
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        self.presentViewController(playerController, animated: true) {
-            player.play()
-        }
+        
+        //let playerController = AVPlayerViewController()
+        //self.player = player
+        //self.presentViewController(self, animated: true) {
+        //    player.play()
+        //}
     }
 }
 

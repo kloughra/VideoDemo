@@ -37,11 +37,13 @@ class MainViewController: UIViewController {
             destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
         }
         if segue.identifier == "localVideo" {
-            //let destination = segue.destinationViewController as! MovieViewController
-           // destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
+            let destination = segue.destinationViewController as! MovieViewController
+            let path = NSBundle.mainBundle().pathForResource("trailer_1080p", ofType:"mov")
+            let player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
+            destination.player = player
         }
         
+
+
     }
-
-
 }

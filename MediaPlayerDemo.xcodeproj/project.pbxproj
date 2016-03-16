@@ -59,12 +59,9 @@
 		457D7D0A1C97415B00AEBE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457D7D161C97425900AEBE11 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		457D7D181C9744CB00AEBE11 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-		45EACED61C993BE100467D9E /* LiveVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveVideoViewController.swift; sourceTree = "<group>"; };
-=======
 		45EACED41C9934D900467D9E /* LiveVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveVideoViewController.swift; sourceTree = "<group>"; };
 		45EACED81C99413D00467D9E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
->>>>>>> dev2
+
 		CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_1080p.mov; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -123,23 +120,10 @@
 		457D7CE41C97415B00AEBE11 /* MediaPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				45EACED61C993BE100467D9E /* LiveVideoViewController.swift */,
-				451299461C98FCA100111BC5 /* MainViewController.swift */,
-				CC44E3F01C99103D0060F0F5 /* trailer_1080p.mov */,
-				457D7CE51C97415B00AEBE11 /* AppDelegate.swift */,
-				457D7CE71C97415B00AEBE11 /* StreamViewController.swift */,
-				457D7CE91C97415B00AEBE11 /* Main.storyboard */,
-				CC44E3EC1C990AEC0060F0F5 /* MovieViewController.swift */,
-				457D7CEF1C97415B00AEBE11 /* Assets.xcassets */,
-				457D7CF11C97415B00AEBE11 /* LaunchScreen.storyboard */,
-				457D7CF41C97415B00AEBE11 /* Info.plist */,
-				457D7CEC1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld */,
-=======
+
 				45EACEDC1C99D51300467D9E /* Controller */,
 				45EACEDB1C99D4FC00467D9E /* View */,
 				45EACEDD1C99D52D00467D9E /* Other */,
->>>>>>> dev2
 			);
 			path = MediaPlayerDemo;
 			sourceTree = "<group>";
@@ -331,11 +315,9 @@
 			files = (
 				457D7CE81C97415B00AEBE11 /* LocalMediaViewController.swift in Sources */,
 				CC44E3ED1C990AEC0060F0F5 /* MovieViewController.swift in Sources */,
-<<<<<<< HEAD
-				45EACED71C993BE100467D9E /* LiveVideoViewController.swift in Sources */,
-=======
+
 				45EACED51C9934D900467D9E /* LiveVideoViewController.swift in Sources */,
->>>>>>> dev2
+
 				457D7CEE1C97415B00AEBE11 /* MediaPlayerDemo.xcdatamodeld in Sources */,
 				457D7CE61C97415B00AEBE11 /* AppDelegate.swift in Sources */,
 				451299471C98FCA100111BC5 /* MainViewController.swift in Sources */,
