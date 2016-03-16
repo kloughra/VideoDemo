@@ -71,8 +71,14 @@ extension LocalMediaViewController{
         //let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         
         dismissViewControllerAnimated(true, completion: nil)
+        
+        //Here we just dismiss the view, but we can choose what we do with the video on completion! If we would like to we
+        //could play it again, or we could send the video somewhere else to be used
+        
+        //Commented out is an example of us playing it again
+        
         /*dismissViewControllerAnimated(true) {
-            // 3
+        
             if mediaType == kUTTypeMovie {
                 let player = AVPlayer(URL:info[UIImagePickerControllerMediaURL] as! NSURL)
                 let playerViewController = AVPlayerViewController()
