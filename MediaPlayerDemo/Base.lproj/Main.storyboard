@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVG-OS-Vkh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVG-OS-Vkh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Movie View Controller-->
-        <scene sceneID="w0s-ot-RZe">
+        <!--AV Player View Controller-->
+        <scene sceneID="MTq-Ir-v3M">
             <objects>
-                <viewController id="sxd-oh-rbE" customClass="MovieViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1aD-Pt-Xm7"/>
-                        <viewControllerLayoutGuide type="bottom" id="Unn-94-zT6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Sw-bY-I7o">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4l9-wK-C2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="BXx-Hk-DF6" customClass="LiveVideoViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6A-If-XTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="-520"/>
+            <point key="canvasLocation" x="1040" y="-567"/>
         </scene>
-        <!--Stream View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="zlJ-vM-NLP">
             <objects>
-                <viewController id="t2p-5g-2Ka" customClass="StreamViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t2p-5g-2Ka" customClass="MovieViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SFY-ht-S8x"/>
                         <viewControllerLayoutGuide type="bottom" id="C8t-sF-nlR"/>
@@ -74,7 +64,7 @@
                                 <state key="normal" title="Live Video"/>
                                 <connections>
                                     <action selector="liveButton:" destination="cVG-OS-Vkh" eventType="touchUpInside" id="BuN-ds-rse"/>
-                                    <segue destination="t2p-5g-2Ka" kind="presentation" identifier="liveVideo" id="cZ4-UY-vx5"/>
+                                    <segue destination="BXx-Hk-DF6" kind="presentation" identifier="liveVideo" id="nKC-26-ldC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-fw-ptr">
@@ -87,7 +77,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Local Video"/>
                                 <connections>
-                                    <segue destination="sxd-oh-rbE" kind="show" id="spo-sK-0T1"/>
+                                    <action selector="localButton:" destination="cVG-OS-Vkh" eventType="touchUpInside" id="6kH-MN-MvK"/>
+                                    <segue destination="t2p-5g-2Ka" kind="presentation" identifier="localVideo" id="dhG-kK-4je"/>
                                 </connections>
                             </button>
                         </subviews>
