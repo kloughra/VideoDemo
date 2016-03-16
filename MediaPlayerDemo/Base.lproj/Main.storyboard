@@ -1,40 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVG-OS-Vkh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Stream View Controller-->
+        <scene sceneID="zlJ-vM-NLP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t2p-5g-2Ka" customClass="StreamViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="SFY-ht-S8x"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8t-sF-nlR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Lsn-TR-kQo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhc-Io-BG1">
-                                <rect key="frame" x="130" y="180" width="340" height="239"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E70-Bf-tkB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2z2-ye-foe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="-126"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="xru-Mu-0if">
+            <objects>
+                <viewController id="cVG-OS-Vkh" customClass="MainViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Spd-3I-0ml"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0B-zn-My9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="es1-yH-Rdm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Streaming Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-sU-FQy">
+                                <rect key="frame" x="167" y="44" width="267" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR8-jT-jPQ">
+                                <rect key="frame" x="243" y="123" width="114" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="2KV-Hl-0gH"/>
+                                    <constraint firstAttribute="height" constant="65" id="zkF-P2-5gl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Live Video"/>
+                                <connections>
+                                    <action selector="liveButton:" destination="cVG-OS-Vkh" eventType="touchUpInside" id="BuN-ds-rse"/>
+                                    <segue destination="t2p-5g-2Ka" kind="presentation" identifier="liveVideo" id="cZ4-UY-vx5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-fw-ptr">
+                                <rect key="frame" x="243" y="238" width="114" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Audio"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt6-0r-g3q">
+                                <rect key="frame" x="243" y="360" width="114" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Local Video"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uhc-Io-BG1" secondAttribute="trailing" constant="110" id="Lnc-jR-dbh"/>
-                            <constraint firstItem="Uhc-Io-BG1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="Pbr-uG-Hc9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uhc-Io-BG1" secondAttribute="bottom" constant="181" id="egm-qr-Nuw"/>
-                            <constraint firstItem="Uhc-Io-BG1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="guh-gH-eRp"/>
+                            <constraint firstItem="pt6-0r-g3q" firstAttribute="width" secondItem="tJx-fw-ptr" secondAttribute="width" id="3w5-Yy-voU"/>
+                            <constraint firstItem="sR8-jT-jPQ" firstAttribute="centerX" secondItem="es1-yH-Rdm" secondAttribute="centerX" id="9gR-J9-F7I"/>
+                            <constraint firstItem="sR8-jT-jPQ" firstAttribute="top" secondItem="8kS-sU-FQy" secondAttribute="bottom" constant="50" id="Bop-9C-LJ1"/>
+                            <constraint firstItem="8kS-sU-FQy" firstAttribute="centerX" secondItem="es1-yH-Rdm" secondAttribute="centerX" id="CFX-8B-uKx"/>
+                            <constraint firstItem="tJx-fw-ptr" firstAttribute="height" secondItem="sR8-jT-jPQ" secondAttribute="height" id="DWN-02-5mL"/>
+                            <constraint firstItem="8kS-sU-FQy" firstAttribute="top" secondItem="Spd-3I-0ml" secondAttribute="bottom" constant="24" id="EKm-os-nWW"/>
+                            <constraint firstItem="pt6-0r-g3q" firstAttribute="height" secondItem="tJx-fw-ptr" secondAttribute="height" id="GC9-Yp-Rvz"/>
+                            <constraint firstItem="tJx-fw-ptr" firstAttribute="width" secondItem="sR8-jT-jPQ" secondAttribute="width" id="V5U-T0-8fZ"/>
+                            <constraint firstItem="pt6-0r-g3q" firstAttribute="centerX" secondItem="es1-yH-Rdm" secondAttribute="centerX" id="VLZ-aQ-E8r"/>
+                            <constraint firstItem="pt6-0r-g3q" firstAttribute="top" secondItem="tJx-fw-ptr" secondAttribute="bottom" constant="57" id="cGE-zY-zMx"/>
+                            <constraint firstItem="tJx-fw-ptr" firstAttribute="centerX" secondItem="es1-yH-Rdm" secondAttribute="centerX" id="fQh-Zm-a2Q"/>
+                            <constraint firstItem="tJx-fw-ptr" firstAttribute="top" secondItem="sR8-jT-jPQ" secondAttribute="bottom" constant="50" id="nyA-dM-7hO"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-N8-pqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="169"/>
+            <point key="canvasLocation" x="303" y="-120"/>
         </scene>
     </scenes>
 </document>
