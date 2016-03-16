@@ -16,9 +16,6 @@ class LiveVideoViewController: AVPlayerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*self.presentViewController(self, animated: true) {
-            self.player!.play()
-        }*/
 
         // Do any additional setup after loading the view.
     }
@@ -28,7 +25,9 @@ class LiveVideoViewController: AVPlayerViewController {
         //self.player = player
         //self.playerViewController.view.frame = CGRectMake(0, 0, 100, 100)
         
-        
+        self.presentViewController(self, animated: true) {
+            self.player!.play()
+        }
         // Dispose of any resources that can be recreated.
     }
     

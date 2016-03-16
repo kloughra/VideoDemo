@@ -3,38 +3,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--AV Player View Controller-->
-        <scene sceneID="MTq-Ir-v3M">
+        <scene sceneID="FsL-3t-vYN">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="BXx-Hk-DF6" customClass="LiveVideoViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B6A-If-XTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="4gr-uk-vJj" customClass="LiveVideoViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOS-JH-5pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="-567"/>
+            <point key="canvasLocation" x="1035" y="-561"/>
         </scene>
-        <!--Movie View Controller-->
-        <scene sceneID="zlJ-vM-NLP">
+        <!--AV Player View Controller-->
+        <scene sceneID="vAu-0y-evd">
             <objects>
-                <viewController id="t2p-5g-2Ka" customClass="MovieViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SFY-ht-S8x"/>
-                        <viewControllerLayoutGuide type="bottom" id="C8t-sF-nlR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lsn-TR-kQo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E70-Bf-tkB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2z2-ye-foe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="FzB-Nw-VNL" customClass="MovieViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8u-On-mLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="154"/>
+            <point key="canvasLocation" x="1075" y="182"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="xru-Mu-0if">
@@ -55,30 +41,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR8-jT-jPQ">
-                                <rect key="frame" x="243" y="123" width="114" height="65"/>
+                                <rect key="frame" x="212" y="123" width="176" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="2KV-Hl-0gH"/>
+                                    <constraint firstAttribute="width" constant="176" id="2KV-Hl-0gH"/>
                                     <constraint firstAttribute="height" constant="65" id="zkF-P2-5gl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Live Video"/>
                                 <connections>
-                                    <action selector="liveButton:" destination="cVG-OS-Vkh" eventType="touchUpInside" id="BuN-ds-rse"/>
-                                    <segue destination="BXx-Hk-DF6" kind="presentation" identifier="liveVideo" id="nKC-26-ldC"/>
+                                    <segue destination="4gr-uk-vJj" kind="presentation" identifier="liveVideo" id="1Wu-X2-eDt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-fw-ptr">
-                                <rect key="frame" x="243" y="238" width="114" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Audio"/>
+                                <rect key="frame" x="212" y="238" width="176" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="OhG-fg-0Io"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="iPhone Video"/>
+                                <connections>
+                                    <segue destination="Tnd-L5-jXp" kind="presentation" identifier="mediaPicker" id="2Zq-2W-THF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt6-0r-g3q">
-                                <rect key="frame" x="243" y="360" width="114" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="212" y="360" width="176" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Local Video"/>
                                 <connections>
-                                    <action selector="localButton:" destination="cVG-OS-Vkh" eventType="touchUpInside" id="6kH-MN-MvK"/>
-                                    <segue destination="t2p-5g-2Ka" kind="presentation" identifier="localVideo" id="dhG-kK-4je"/>
+                                    <segue destination="FzB-Nw-VNL" kind="presentation" identifier="localVideo" id="llM-kR-lmp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,6 +92,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-N8-pqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="267" y="-156"/>
+        </scene>
+        <!--Local Media View Controller-->
+        <scene sceneID="jr8-5H-5bO">
+            <objects>
+                <viewController id="Tnd-L5-jXp" customClass="LocalMediaViewController" customModule="MediaPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q8e-QK-VK1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ge5-nw-Y6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="65U-cw-8gD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO6-sL-cbL">
+                                <rect key="frame" x="207" y="103" width="187" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="3Vv-An-9WI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Choose Video"/>
+                                <connections>
+                                    <action selector="play:" destination="Tnd-L5-jXp" eventType="touchUpInside" id="5xm-pk-PNI"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vP1-I1-rI4">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Mobile Core Videos" id="jan-xT-eDF">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Uhl-CN-F0h">
+                                            <connections>
+                                                <action selector="doneButton:" destination="Tnd-L5-jXp" id="ijD-DW-Z5g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TO6-sL-cbL" firstAttribute="centerX" secondItem="65U-cw-8gD" secondAttribute="centerX" id="BaQ-hc-cCI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vP1-I1-rI4" secondAttribute="trailing" constant="-20" id="FmW-Lx-XzP"/>
+                            <constraint firstItem="vP1-I1-rI4" firstAttribute="leading" secondItem="65U-cw-8gD" secondAttribute="leadingMargin" constant="-20" id="JBm-6N-51y"/>
+                            <constraint firstItem="vP1-I1-rI4" firstAttribute="top" secondItem="Q8e-QK-VK1" secondAttribute="bottom" constant="8" id="KnH-to-ZfQ"/>
+                            <constraint firstItem="TO6-sL-cbL" firstAttribute="top" secondItem="vP1-I1-rI4" secondAttribute="bottom" constant="31" id="Z5n-zi-m0P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOa-2y-n2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="650"/>
         </scene>
     </scenes>
 </document>

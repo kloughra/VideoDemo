@@ -10,15 +10,9 @@ import UIKit
 import MediaPlayer
 import AVKit
 
-
 class MainViewController: UIViewController {
 
-    @IBAction func localButton(sender: UIButton) {
-        performSegueWithIdentifier("localVideo", sender: sender)
-    }
-    @IBAction func liveButton(sender: UIButton) {
-        performSegueWithIdentifier("liveVideo", sender: sender)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +36,11 @@ class MainViewController: UIViewController {
             let destination = segue.destinationViewController as! LiveVideoViewController
             destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
         }
+        if segue.identifier == "localVideo" {
+            //let destination = segue.destinationViewController as! MovieViewController
+           // destination.player = AVPlayer(URL: NSURL(string: "http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8")!)
+        }
+        
     }
 
 
